@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/app-service/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/app-service/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/app-service",
+  "projects": {
+    "app-service": {
+      "type": "application",
+      "root": "apps/app-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/app-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/app-service/tsconfig.app.json"
+      }
+    },
+    "user-service": {
+      "type": "application",
+      "root": "apps/user-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/user-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/user-service/tsconfig.app.json"
+      }
+    },
+    "wxpay-service": {
+      "type": "application",
+      "root": "apps/wxpay-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/wxpay-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/wxpay-service/tsconfig.app.json"
+      }
+    }
+  }
+}
